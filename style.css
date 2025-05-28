@@ -1,0 +1,381 @@
+/* Общие стили */
+body {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #ffe6f2, #e6f7ff); /* Нежный градиент */
+    color: #4a4a4a;
+    line-height: 1.7;
+    overflow-x: hidden; /* Чтобы не было горизонтальной прокрутки из-за сердечек */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Эффект появления секций */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Шапка */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #ffcce0, #ffaad5); /* Нежный розовый градиент */
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; /* Для сердечек */
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+header p {
+    font-size: 1.3em;
+    margin-top: 0;
+    font-family: 'Dancing Script', cursive;
+}
+
+.highlight-name {
+    color: #fce4ec; /* Светло-розовый */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Секции контента */
+section {
+    background-color: white;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    max-width: 900px;
+}
+
+section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #d81b60; /* Ярко-розовый */
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #f06292;
+    padding-bottom: 10px;
+}
+
+/* Раздел "О Тебе, Умничка!" */
+#about p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.drawing-showcase {
+    text-align: center;
+    margin-top: 30px;
+    background-color: #fef1f8;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(255, 105, 180, 0.1);
+}
+
+.drawing-showcase h3 {
+    font-family: 'Pacifico', cursive;
+    color: #e91e63;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.drawing-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.drawing-img:hover {
+    transform: scale(1.02);
+}
+
+.compliment {
+    font-style: italic;
+    color: #883355;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+/* Галерея фотографий */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.photo-item {
+    background-color: #fbf0f5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 250px; /* Фиксированная высота для единообразия */
+    object-fit: cover; /* Обрезает, чтобы заполнить область */
+    display: block;
+}
+
+.photo-compliment {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    color: #e91e63;
+    padding: 15px;
+    margin: 0;
+}
+.caption {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    margin-top: 30px;
+}
+
+/* Игровой уголок */
+#games {
+    text-align: center;
+}
+
+.riddle-box {
+    background-color: #f7e6ff;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 0 10px rgba(150, 100, 200, 0.1);
+}
+
+#riddle-text {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #8e24aa;
+    margin-bottom: 20px;
+}
+
+#riddle-answer {
+    font-size: 1.2em;
+    color: #4a148c;
+    margin-top: 15px;
+    border-top: 1px dashed #ce93d8;
+    padding-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #673ab7; /* Фиолетовый */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #512da8;
+    transform: translateY(-2px);
+}
+
+#game-area {
+    background-color: #e0f2f7;
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 250px;
+    position: relative; /* Для позиционирования сердечек */
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(100, 150, 200, 0.1);
+}
+
+#score {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0288d1;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#heart-spawn-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.game-heart {
+    position: absolute;
+    font-size: 2.5em;
+    cursor: pointer;
+    animation: pulse 0.5s infinite alternate; /* Анимация пульсации */
+    transition: transform 0.1s ease-out; /* Для плавного исчезновения */
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* Самые нежные слова */
+.sweet-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
+    line-height: 1.8;
+    color: #880e4f; /* Темно-розовый */
+    text-align: center;
+}
+
+.sweet-text p {
+    margin-bottom: 25px;
+}
+
+/* Скрытое сообщение */
+.hidden-message {
+    opacity: 0;
+    color: #f48fb1; /* Очень светлый розовый */
+    font-size: 0.8em; /* Очень маленький шрифт */
+    transition: opacity 0.5s ease;
+    text-align: right;
+    margin-top: 50px; /* Чтобы не слипалось */
+    cursor: default; /* Курсор не меняется */
+}
+
+/* Подсказка для скрытого сообщения, чтобы было легче найти */
+.secret-hint {
+    text-align: center;
+    margin-top: 20px;
+    color: #999;
+}
+
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(to right, #e0b3e8, #c4a1d8); /* Нежный сиреневый */
+    color: white;
+    font-size: 0.9em;
+    margin-top: 50px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Летающие сердечки на фоне */
+.heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Чтобы не мешали взаимодействию */
+    z-index: -1; /* Чтобы были под контентом */
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 1.5em;
+    color: rgba(255, 105, 180, 0.6); /* Полупрозрачный розовый */
+    animation: floatHeart linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes floatHeart {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 25px;
+        margin: 20px auto;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных */
+    }
+
+    .sweet-text {
+        font-size: 1.2em;
+    }
+}
